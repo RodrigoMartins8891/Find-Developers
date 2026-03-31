@@ -1,19 +1,61 @@
-# React + Vite
+# 🔍 GitHub Search App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação desenvolvida em React para buscar usuários do GitHub e exibir seus repositórios com scroll infinito.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Tecnologias utilizadas
 
-## React Compiler
+- React
+- Chakra UI
+- React Router
+- Axios
+- i18next (internacionalização)
+- Zod (validação de dados)
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+---
 
-Note: This will impact Vite dev & build performances.
+## 📱 Funcionalidades
 
-## Expanding the ESLint configuration
+- 🔎 Busca de usuários do GitHub por username
+- ❌ Exibição de mensagem quando usuário não é encontrado
+- 👤 Página de perfil com dados do usuário
+- 📦 Listagem de repositórios com scroll infinito
+- 🔄 Ordenação dos repositórios (created, updated, pushed, name)
+- 🔗 Links diretos para os repositórios
+- 🌐 Botões para Website e Twitter (quando disponíveis)
+- 📱 Layout responsivo (desktop e mobile)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-"# Find-Developers" 
+---
+
+## 🖥️ Como rodar o projeto
+
+```bash
+npm install
+npm run dev
+🌐 Deploy
+
+👉 (https://find-developers-ctvkkks7t-rodrigo-martins-de-oliveiras-projects.vercel.app/)
+
+🔐 Variáveis de ambiente
+
+Para evitar limitações da API do GitHub, você pode criar um arquivo .env:
+
+VITE_GITHUB_TOKEN=seu_token_aqui
+⚠️ Observações
+
+A API do GitHub possui limite de requisições para usuários não autenticados.
+
+Caso ocorra erro ao buscar usuários, aguarde alguns minutos e tente novamente.
+
+📌 Decisões técnicas
+Utilização do Chakra UI para construção de uma interface rápida e responsiva
+Implementação de scroll infinito com Intersection Observer
+Separação de componentes para melhor organização e manutenção
+Uso de i18n para internacionalização dos textos
+Validação de dados com Zod para maior segurança
+
+
+👨‍💻 Autor
+
+Desenvolvido por Rodrigo Martins
