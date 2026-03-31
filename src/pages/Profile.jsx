@@ -1,6 +1,14 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { Box, Text, Button, Skeleton, Stack, Alert, AlertIcon } from "@chakra-ui/react";
+import {
+  Box,
+  Text,
+  Button,
+  Skeleton,
+  Stack,
+  Alert,
+  AlertIcon,
+} from "@chakra-ui/react";
 import { api } from "../services/api";
 import RepoList from "../components/RepoList";
 import UserCard from "../components/UserCard";
@@ -36,21 +44,23 @@ export default function Profile() {
       <Box maxW="1000px" mx="auto" p={8}>
         <Alert status="error" borderRadius="md">
           <AlertIcon />
-          Something went wrong while loading the profile. Please try again later.
+          Something went wrong while loading the profile. Please try again
+          later.
         </Alert>
-        <Button mt={4} onClick={() => navigate("/")}>Back to Home</Button>
+        <Button mt={4} onClick={() => navigate("/")}>
+          Back to Home
+        </Button>
       </Box>
     );
   }
 
   return (
     <Box maxW="1000px" mx="auto" p={4}>
-      <Button mb={4} variant="ghost" onClick={() => navigate(-1)}>
+      <Button size="sm" mb={4} variant="ghost" onClick={() => navigate(-1)}>
         ← Back
       </Button>
 
       <Box display="flex" flexDirection={{ base: "column", md: "row" }} gap={6}>
-       
         <Box w={{ base: "100%", md: "30%" }}>
           {loading ? (
             <Stack>
